@@ -1,0 +1,24 @@
+package exam03;
+
+import java.util.HashSet;
+
+public class Ex07 {
+    public static void main(String[] args) {
+
+        HashSet<Book> books = new HashSet<>();
+        books.add(new Book("책1","저자1","출판사1"));
+        books.add(new Book("책2","저자2","출판사2"));
+        books.add(new Book("책2","저자2","출판사2"));
+        books.add(new Book("책3","저자3","출판사3"));
+        books.add(new Book("책4","저자4","출판사4"));
+        books.add(new Book("책5","저자5","출판사5"));
+
+        // 값은 같아도 hashCode()값이 같지 않기 때문에 제거가 안됨
+        // 동등성 비교 = equals() + hashCode()
+
+        for (Book book : books) {
+            System.out.println(book);
+        }
+
+    }
+}
